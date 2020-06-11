@@ -1,0 +1,238 @@
+.grid {
+    height: 480px;
+    position: relative;
+}
+
+/* ad */
+.ad {
+    width: 250px;
+    height: 480px;
+    position: absolute;
+    left: -250px;
+}
+.ad-r {
+    width: 0;
+    height: 480px;
+    background: url(../images/ad-r.jpg);
+    position: absolute;
+    top: 0;
+    left: 250px;
+    z-index: 999;
+    transition: all 0.8s;
+}
+.ad:hover .ad-r {
+    width: 990px;
+    display: inline-block;
+}
+/* 中间分类部分最左菜单栏 start */
+.grid-col1 {
+    width: 190px;
+    height: 100%;
+    background-color: #6e6568;
+    /* 斜杠 */
+    color: #ffffff;
+    font-size: 14px;
+}
+.grid-col1 a {
+    /* 链接文字 */
+    color: #ffffff;
+    font-size: 14px;
+    margin: 0 3px;
+}
+.grid-col1 a:hover {
+    /* 链接文字 */
+    color: #f10215;
+}
+.grid-col1 ul {
+    padding: 10px 0;
+}
+.grid-col1 ul li {
+    padding-left: 12px;
+    /* margin-left: 12px; 因为要做鼠标经过效果 */
+    line-height: 26px;
+}
+.grid-col1 ul li:hover {
+    background-color: #9c9698;
+}
+/* 中间分类部分最左菜单栏 end */
+
+/* 中间分类部分中间banner栏 start */
+.grid-col2 {
+    width: 790px;
+    height: 100%;
+    margin-left: 10px;
+}
+.grid-col2-t {
+    position: relative;
+}
+.grid-col2-b div {
+    margin-top: 10px;
+}
+/* 箭头部分 */
+.arrow-l,
+.arrow-r {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 60px;
+    background-color: rgba(0,0,0,0.3);
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: rgba(255,255,255,0.6);
+}
+.arrow-l {
+    left: 0;
+    transform: translateY(-50%);
+}
+.arrow-r {
+    right: 0;
+    transform: translateY(-50%);
+}
+/* 轮播图小圆圈部分 */
+.circle {
+    width: 180px;
+    box-sizing: border-box;    
+    height: 20px;
+    background-color: rgba(255,255,255,0.3);
+    position: absolute;
+    left: 50%; 
+    bottom: 20px;
+    border-radius: 10px;
+    transform: translateX(-50%);
+    padding-left: 10px;
+
+}
+.circle li {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    float: left;
+    margin: 4px;
+    cursor: pointer; /* 鼠标经过li的时候变成小手 */
+}
+.circle .current {
+    background-color: #f10215;
+}
+/* 中间分类部分中间banner栏 end */
+
+/* 中间分类部分右边个人中心 start */
+.grid-col3 {
+    width: 190px;
+    height: 100%;
+    background-color: #fff;
+}
+/* 登陆模块 */
+.login {
+    height: 115px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+
+    padding: 15px;
+}
+.login-t {
+    font-size: 12px;
+    width: 95px;
+    height: 60px;
+    line-height: 20px;
+    white-space: nowrap; /* 强制一行内显示 */
+    overflow: hidden; /* 溢出隐藏 */
+    text-overflow: ellipsis; /* 超出的部分显示省略号 */
+    color: #666;
+    padding-left: 60px;
+    position: relative;
+}
+.login-t a {
+    color: #666;
+}
+.login-t a:hover {
+    color: #f10215;
+}
+.login-t .user-info {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* 给图片的父盒子一个圆角，多余的部分进行裁切 */
+    /* border-radius: 50%;
+    overflow: hidden; */
+    background: url(../images/sprite_userinfo@1x.png) no-repeat -70px 0;
+}
+.user-info img {
+    border-radius: 50%;
+    width: 40px;
+    margin: 5px;
+}
+.login-b a {
+    display: inline-block;
+    width: 70px;
+    height: 20px;
+    border: 2px solid #f10215;
+    line-height: 20px;
+    text-align: center;
+    color: #f10215;
+}
+.login-b a:hover {
+    background-color: #f10215;
+    color: #fff;
+}
+/* 新闻模块 */
+.news {
+    height: 154px;
+    padding: 7px 13px 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+}
+.news-t {
+    height: 19px;
+    border-bottom: 1px solid #ccc;
+}
+.news-t a {
+    height: 17px;    
+    line-height: 17px;    
+    float: left;
+}
+.news-t a:nth-child(1) {
+    width: 38px;
+    border-right: 1px solid #ccc ;
+}
+.news-t a:nth-child(2) {
+    margin-left: 15px;
+}
+.news-t .more {
+    float: right;
+}
+.news-t div {
+    height: 2px;
+    width: 28px;
+    background-color: #f10215;
+    position: absolute;
+    bottom: 1px;
+}
+.news-b {
+    padding-top: 15px;
+    line-height: 23px;
+}
+/* 帮助扩展模块 */
+.expand {
+    height: 209px;
+    overflow: hidden;
+}
+.expand ul {
+    width: 195px;
+}
+.expand li {
+    width: 47px;
+    height: 69px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    float: left;
+}
+/* .expand ul li:nth-child(4) {
+    border-right: 0;
+} */
+/* 中间分类部分右边个人中心 end */
